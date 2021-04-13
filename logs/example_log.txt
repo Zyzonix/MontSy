@@ -1,0 +1,49 @@
+[23:09:41] reading arguments (1)
+[23:09:41] creating system overview (sov) and starting system monitoring (mon)
+[23:09:41] getting configuration for 'sov'
+[23:09:41] moduleinfo (sov) - enabled - installed: system_info
+[23:09:41] moduleinfo (sov) - enabled - installed: cpu_info
+[23:09:41] moduleinfo (sov) - enabled - installed: gpu_info
+[23:09:41] moduleinfo (sov) - enabled - installed: ram_info
+[23:09:41] moduleinfo (sov) - enabled - installed: disk_info
+[23:09:41] moduleinfo (sov) - enabled - installed: boot_info
+[23:09:41] moduleinfo (sov) - enabled - installed: user_info
+[23:09:41] moduleinfo (sov) - enabled - installed: network_info
+[23:09:41] [92mreading sov-configuration passed
+[0m
+[23:09:41] getting configuration for 'mon'
+[23:09:41] moduleinfo (mon) - enabled - installed: cpu_utilisation
+[23:09:41] moduleinfo (mon) - enabled - installed: cpu_percent
+[23:09:41] moduleinfo (mon) - enabled - installed: cpu_running_processes
+[23:09:41] moduleinfo (mon) - enabled - installed: virtual_memory_percent
+[23:09:41] moduleinfo (mon) - enabled - installed: virtual_memory_utilisation
+[23:09:41] moduleinfo (mon) - enabled - installed: swap_ram_percent
+[23:09:41] moduleinfo (mon) - enabled - installed: swap_ram_utilisation
+[23:09:41] moduleinfo (mon) - enabled - installed: net_io_counters
+[23:09:41] moduleinfo (mon) - enabled - installed: net_connections
+[23:09:41] moduleinfo (mon) - enabled - installed: net_if_addrs
+[23:09:41] moduleinfo (mon) - enabled - installed: disk_usage
+[23:09:41] moduleinfo (mon) - enabled - installed: disk_utilisation
+[23:09:41] moduleinfo (mon) - disabled: gpu_percent
+[23:09:41] moduleinfo (mon) - disabled: gpu_freq
+[23:09:41] moduleinfo (mon) - disabled: gpu_temp
+[23:09:41] moduleinfo (mon) - disabled: gpu_vram_percent
+[23:09:41] moduleinfo (mon) - disabled: gpu_vram_utilisation
+[23:09:41] moduleinfo (mon) - enabled - installed: sensors_temperatures
+[23:09:41] moduleinfo (mon) - enabled - installed: sensors_fan
+[23:09:41] moduleinfo (mon) - enabled - installed: pids
+[23:09:41] [92mreading mon-configuration passed
+[0m
+[23:09:41] starting to create a system overview
+[23:09:41] writing data - disk_info
+[23:09:41] writing data - boot_info
+[23:09:41] writing data - network_info
+[23:09:42] writing data - cpu_info
+[23:09:42] writing data - system_info
+[23:09:42] writing data - ram_info
+[23:09:42] empty - gpu_info
+[23:09:42] writing data - user_info
+[23:09:42] [92mcreated system overview successfully
+[0m
+[23:09:42] installing system monitoring
+[23:09:43] collecting data and writing to files
