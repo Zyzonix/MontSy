@@ -17,7 +17,7 @@ All official patch notes can be found within the description of each release.
 The dev-branch patch notes can be found in the README of the dev-branch.
 
 
-### __Table of content__
+## Table of content
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Controlling](#controlling)
@@ -27,7 +27,7 @@ The dev-branch patch notes can be found in the README of the dev-branch.
 * [About the project](#about-the-project)
 
 
-### __Requirements__
+## Requirements
 MontSy can be run on all devices/operating systems, that support Python 3.5 or higher. It is also recommendable to execute it on linux-based systems. The auto-setup scripts (Shell/Bash) and Makefiles can only be executed if the system supports them. 
 
 To install MontSy also Root permission (sudo) are required. But it is recommendable to run MontSy as an other user which is not the root user.
@@ -37,7 +37,7 @@ To install MontSy also Root permission (sudo) are required. But it is recommenda
 If you wish to monitor your system statistics on Windows contact the developer via email (zyzonix@gmail.com). In this case a manual setup is reqired.
 
 
-### __Installation__
+## Installation
 To install MontSy download the whole project via git to your device and enter the downloaded folder:
 ```
 $ git clone https://github.com/Zyzonix/MontSy.git
@@ -69,7 +69,7 @@ The Make-installer will execute a shell-setup-script, that will do the following
 From now on MontSy is installed properly.
 
 
-### __Controlling__
+## Controlling
 #### Software controlling:
 Through the Makefile it is very easy to control MontSy.
 
@@ -107,10 +107,10 @@ $ Make uninstall
 ```
 The Makefile will do the rest for you.
 
-### __How it works__
+## How it works
 MontSy uses libaries as gputil and psutil to collect as much information about your device as possible. 
 The monitoring module will run at a certain interval that can be changed through the setup or manually through editing the configfile in the static directory, the collected data can then be saved in a SQLite database or within an excel sheet.
 The overview module collects its data and writes this data to a systemoverview.txt file, the output directory for both modules will be set by executing the Make setup.
 
-### __About the project__
+## About the project
 My number of Raspberry Pi's has increased through the coronavirus pandemic, additionally I wasn't sure if my Raspberry Pi that provides a VPN-router and a DNS system (pihole) can handle the increased data traffic through home office and home schooling. Therefore I needed a simple tool, that can monitor the system "health" so that I can see if it's necessary to change the device for my VPN-router or the DNS. Another reason for developing this tool was to see how all the other Pi's and NAS/router/accesspoint systems are performing.
