@@ -22,8 +22,8 @@ setup_i:
 	@echo starting MontSy setup
 	@echo started setup
 	@echo "---------------------"
-	sudo chmod +x setup.sh
-	sudo chmod +x view_status.sh
+	sudo chmod +x static/setup.sh
+	sudo chmod +x static/view_status.sh
 	sudo ./static/setup.sh
 
 # removing all entries / files / folders
@@ -31,6 +31,7 @@ uninstall:
 	@echo ""
 	@echo uninstalling MontSy
 	@echo ""
+
 
 
 # starting systemd-service
