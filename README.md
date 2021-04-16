@@ -16,6 +16,7 @@ All official patch notes can be found within the description of each release.
 
 The dev-branch patch notes can be found in the README of the dev-branch.
 
+
 ### Table of content
 * [Requirements](#requirements)
 * [Installation](#installation)
@@ -24,6 +25,7 @@ The dev-branch patch notes can be found in the README of the dev-branch.
   - [Uninstallation](#uninstallation)
 * [How MontSy works](#how-it-works)
 * [About the project](#about-the-project)
+
 
 ### Requirements
 MontSy can be run on all devices/operating systems, that support Python 3.5 or higher. It is also recommendable to execute it on linux-based systems. The auto-setup scripts (Shell/Bash) and Makefiles can only be executed if the system supports them. 
@@ -34,8 +36,8 @@ To install MontSy also Root permission (sudo) are required. But it is recommenda
 
 If you wish to monitor your system statistics on Windows contact the developer via email (zyzonix@gmail.com). In this case a manual setup is reqired.
 
-### Installation
 
+### Installation
 To install MontSy download the whole project via git to your device and enter the downloaded folder:
 ```
 $ git clone https://github.com/Zyzonix/MontSy.git
@@ -66,6 +68,7 @@ The Make-installer will execute a shell-setup-script, that will do the following
 
 From now on MontSy is installed properly.
 
+
 ### Controlling
 #### Software controlling:
 Through the Makefile it is very easy to control MontSy.
@@ -95,6 +98,7 @@ $ Make stop
 $ Make status
 ```
 - To enable specific monitoring and overview modules you have to edit the configfile manually. A script for this will come in a future release.
+
 
 #### Uninstallation:
 - To uninstall MontSy from your device type (not available in release 0.9.1)
