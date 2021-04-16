@@ -31,6 +31,10 @@ uninstall:
 	@echo ""
 	@echo uninstalling MontSy
 	@echo ""
+	make stop
+	make disable
+	sudo rm /lib/systemd/system/montsy.service
+	sudo rm -rf $(CURDIR)
 
 
 
