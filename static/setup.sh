@@ -30,6 +30,8 @@ pip install configparser
 pip3 install openpyxl
 pip3 install psutil
 pip install GPUtil
+pip3 install GPUtil
+pip install py-cpuinfo
 
 # pasting service into correct directory
 echo

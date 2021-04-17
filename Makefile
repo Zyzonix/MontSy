@@ -35,6 +35,7 @@ uninstall:
 	make disable
 	sudo rm /lib/systemd/system/montsy.service
 	sudo rm -rf $(CURDIR)
+	sudo rm -rf $(CURDIR)_OUTPUT
 
 
 

@@ -80,7 +80,6 @@ class Handlers(object):
     def handleMonitoring(self, files, modules, net_modules): 
         # modules = dict[number : modulename]
         print(self.getTime(), "collecting data and writing to files")
-        # REWORK: SPLIT NETWORK AND NORMAL MODULES DURING RETRIEVE
         connectionArray = {}
         xlsxfile = ""
         
