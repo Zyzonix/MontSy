@@ -1,6 +1,6 @@
 # MontSy - The system monitoring tool
 
-[![Version](https://img.shields.io/badge/Version-0.9.1%20(beta)%20-orange)]() 
+[![Version](https://img.shields.io/badge/Version-0.9.2%20(beta)%20-orange)]() 
 [![Python-Version](https://img.shields.io/badge/Python-3.5.3-blue)]()
 [![last updated](https://img.shields.io/badge/last%20update-15/04/2021-9cf)]()
 
@@ -11,10 +11,10 @@ The main functions are the following:
 - system monitoring - records all relevant system data (cpu-usage a.e.)
 - system overview - creates a hardware system overview (cpu-type a.e.)
 
-All official patch notes can be found within the description of each release.
+All official patch notes can be found within the description of each release or in the README of the patch-notes-branch.
 (Doesn't affect on beta / dev-branch releases)
 
-The dev-branch patch notes can be found in the README of the dev-branch.
+The dev-branch patch notes can be found in the README of the patch-notes-branch.
 
 
 ## Table of content
@@ -98,6 +98,22 @@ $ Make stop
 $ Make status
 ```
 - To enable specific monitoring and overview modules you have to edit the configfile manually. A script for this will come in a future release.
+
+- To create a hardware overview and start the monitoring type
+```
+$ python3 core.py 
+```
+After exiting the window, the script will interrupt.
+
+
+- If you wish to create a hardware overview type
+```
+$ python3 core.py s 
+```
+- If you wish to start the monitoring manually type (the script will interrupt when the session ends)
+```
+$ python3 core.py m 
+```
 
 
 #### Uninstallation:
