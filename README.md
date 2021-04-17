@@ -1,6 +1,6 @@
 # MontSy - The system monitoring tool
 
-[![Version](https://img.shields.io/badge/Version-0.9.2%20(beta)%20-orange)]() 
+[![Version](https://img.shields.io/badge/Version-0.9.5%20(beta)%20-orange)]() 
 [![Python-Version](https://img.shields.io/badge/Python-3.5.3-blue)]()
 [![last updated](https://img.shields.io/badge/last%20update-17/04/2021-9cf)]()
 
