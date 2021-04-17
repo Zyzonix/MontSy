@@ -77,7 +77,7 @@ Through the Makefile it is very easy to control MontSy.
 ```
 $ Make 
 ```
-- To start the system service type
+- To start the system service type (this command is the main command for starting the monitoring)
 ```
 $ Make start
 ```
