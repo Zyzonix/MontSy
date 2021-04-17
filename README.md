@@ -10,4 +10,4 @@ Here you can find the latest patch notes of the dev-branch. All official release
 * [Patch 0.9.2](#patch-0.9.2)
 
 ## Patch 0.9.2
-coming soon
+- fixed installation / uninstallation errors
