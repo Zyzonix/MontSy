@@ -7,6 +7,7 @@
 # -
 # file      | Makefile
 # project   | MontSy
+# version	| 0.9.6
 # 
 
 # executing the setup

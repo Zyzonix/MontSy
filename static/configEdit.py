@@ -8,6 +8,7 @@
 # -
 # file      | configEdit.py
 # project   | MontSy (Setup)
+# version   | 0.9.6
 # 
 from configparser import ConfigParser
 import os
@@ -32,16 +33,9 @@ try:
 except:
     print("please enter a valid value (requires a restart: python3 configEdit.py)\n")
 
-path = input("Please type in the output directory: (/path/to/folder) | leave empty for autoset\n")
-if path.endswith("/"):
-    conf["CONFIGURATION"]["output_dest"] = path
-elif path == "":
-    path = os.path.abspath(os.getcwd()).replace("MontSy", "MontSy_OUTPUT/")
-    conf["CONFIGURATION"]["output_dest"] = path
-    print("directory set to: " + os.path.abspath(os.getcwd()).replace("MontSy", "MontSy_OUTPUT/"))
-else:     
-    path = path + "/"
-    conf["CONFIGURATION"]["output_dest"] = path + "/"
+path = os.path.abspath(os.getcwd()).replace("MontSy", "MontSy_OUTPUT/")
+print("output directory set to: " + path)
+conf["CONFIGURATION"]["output_dest"] = path
 
 # requesting user for execution
 user = input("Which user will execute the main class? (Standard: pi)\n")

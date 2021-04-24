@@ -8,19 +8,15 @@
 # -
 # file      | core.py
 # project   | MontSy
-# project-v | 0.9.1 (beta)
+# project-v | 0.9.6
 # 
 from datetime import date, datetime
 from configparser import ConfigParser
-import sqlite3
-import traceback
 import os
 import sys
-import threading
 import openpyxl
-import static.values as values
+import time
 from static.values import colorsetting as color
-from modules import overview, monitoring
 
 
 # writing console output to console and logfile
@@ -39,13 +35,15 @@ class LogWriter(object):
         # flushing written lines/files
         for file in self.files:
             file.flush()
-
+        
 
 # software functionalities (sov and mon)
 class Handlers(object):
     
     # system overview handler | key: s
     def handleOverview(self):
+        from modules import overview
+        from static import values
         output = overview.prepareStoring(self)
         module_list = overview.retrieveModules(self)
 
@@ -71,13 +69,15 @@ class Handlers(object):
             print(self.getTime(), color.GREEN + "created system overview successfully\n" + color.END)            
             output.close()
         
-        except:
-            traceback.print_exc()
+        except Exception as e:
+            print(e)
             print(self.getTime(), color.RED + "something went wrong - wasn't able to create a system overview" + color.END)
 
 
     # system monitoring handler | key: m 
     def handleMonitoring(self, files, modules, net_modules): 
+        from modules import monitoring
+        import sqlite3, threading
         # modules = dict[number : modulename]
         print(self.getTime(), "collecting data and writing to files")
         connectionArray = {}
@@ -166,11 +166,13 @@ class Handlers(object):
         
         except KeyboardInterrupt as e:
             print(e)
-            print(self.getTime(), color.RED + "stopped Montsy"  + color.END)
+            print(self.getTime(), color.RED + "stopped MontSy"  + color.END)
                         
 
     # system monitoring handler (preparation) | key: m 
     def prepareMonitoring(self):
+        from modules import monitoring
+        from static import values
         module_list = self.enabled_module_list["m"]
         # general: everything except network
         sheetNeeded = {
@@ -234,6 +236,7 @@ class Core(object):
                     else:
                         print(self.getTime(), "moduleinfo (" + modulespec[importModules] + ") - disabled:", module)
                     counter += 1
+                    time.sleep(0.1)
             
             else:
                 print(self.getTime(),"no modules found - check config file")
@@ -244,9 +247,9 @@ class Core(object):
             print(self.getTime(), color.GREEN + "reading " + modulespec[importModules] + "-configuration passed\n" + color.END)
             return True
         
-        except:
+        except Exception as e:
             print(self.getTime(), color.RED + "something went wrong - was not able to get the configuration - exiting...\n" + color.END)
-            traceback.print_exc()
+            print(e)
             return False
 
     # writing console to log
@@ -257,7 +260,6 @@ class Core(object):
         sys.stdout = LogWriter(sys.stdout, self.logFile)    
 
     def __init__(self):
-        print("\n" + self.getTime(), "running " + color.RED + color.BOLD +  "Mon(t)Sy" + color.END + " (system monitoring and overview) application \n")
         # saving ressources global (like public) // retrieving missing from config file
         configImport = ConfigParser()
         configFile = os.getcwd() + "/static/config.ini"
@@ -266,7 +268,6 @@ class Core(object):
         # preparing instance for saving execution directory
         configWriter = ConfigParser(comment_prefixes='/', allow_no_value=True)
         configWriter.read(configFile)
-        
         try:
             # importing config data
             self.baseFilePath = os.getcwd() + "/"
@@ -277,14 +278,15 @@ class Core(object):
             self.MES_TIME = int(configImport["CONFIGURATION"]["log_dur"])
             self.storage_m = int(configImport["CONFIGURATION"]["mon_storage_method"])
             self.out_directory = configImport["CONFIGURATION"]["output_dest"]
-        except:
-            traceback.print_exc()
+        except Exception as e:
+            print(e)
             return
 
         # initializing log, if enabled
         if int(configImport["CONFIGURATION"]["log_enabled"]) == 1:
             self.writeLog()
-
+    
+        from static import values
         # preparing lists for enabled modules
         self.enabled_module_list = values.module_dictionary
         # importing preset settings

@@ -1,15 +1,51 @@
 
-SYSTEM OVERVIEW - created by Mon(t)Sy
+SYSTEM OVERVIEW - created by MonSy
 
-Mon(t)Sy Software - developed by ZyzonixDev | published by ZyzonixDevelopments in 2021
+MonSy Software - developed by ZyzonixDev | published by ZyzonixDevelopments in 2021
 
+
+~~~~~~~~~~~~~~~~~~~~ BOOT INFO ~~~~~~~~~~~~~~~~~~~~
+Boot time:	 2021-04-24 06:08:27
+Uptime:		 13:23h | 48231 sec
 
 ~~~~~~~~~~~~~~~~~~~~ GENERAL SYSTEM INFO ~~~~~~~~~~~~~~~~~~~~
 System:			 Linux
-Hostname:		 rpi3bbll
+Hostname:		 
 Release:		 4.19.66-v7+
 Platform:		 Linux-4.19.66-v7+-armv7l-with-debian-9.13
 Architecture:	 armv7l | 32bit
+
+~~~~~~~~~~~~~~~~~~~~ MEMORY INFO ~~~~~~~~~~~~~~~~~~~~
+Total RAM:			 926.078125 MB
+Total Swap RAM:		 99.99609375 MB
+
+~~~~~~~~~~~~~~~~~~~~NETWORK INFO ~~~~~~~~~~~~~~~~~~~~
+eth0 Network Speed: 100
+
+~~~~~~~~~~~~~~~~~~~~ PROCESSOR INFO ~~~~~~~~~~~~~~~~~~~~
+Processor brand:	 ARMv7 Processor rev 4 (v7l)
+Chip ID:			 BCM2835
+Physical cores:		 4
+Total cores:		 4
+Max frequency:		 1400.0(MHz)
+Min frequency:		 600.0(MHz)
+
+~~~~~~~~~~~~~~~~~~~~ DISK(S) INFO ~~~~~~~~~~~~~~~~~~~~
+Diskpartition count:		 2
+Partition 1 name:			 /dev/root
+Partition 1 mountpoint:		 /
+Partition 1 FS type:		 ext4
+Partition 1 total size:		 58.58009719848633 GB
+Partition 1 space used:		 4.029335021972656 GB
+Partition 1 space free:		 52.1120719909668 GB
+
+Partition 2 name:			 /dev/mmcblk0p1
+Partition 2 mountpoint:		 /boot
+Partition 2 FS type:		 vfat
+Partition 2 total size:		 43.18359375 MB
+Partition 2 space used:		 22.3203125 MB
+Partition 2 space free:		 20.86328125 MB
+
 
 ~~~~~~~~~~~~~~~~~~~~ USER INFO ~~~~~~~~~~~~~~~~~~~~
 User count: 29
@@ -42,39 +78,3 @@ statd - home directory: 	/var/lib/nfs
 sshd - home directory: 	/run/sshd
 avahi - home directory: 	/var/run/avahi-daemon
 lightdm - home directory: 	/var/lib/lightdm
-
-~~~~~~~~~~~~~~~~~~~~ BOOT INFO ~~~~~~~~~~~~~~~~~~~~
-Boot time:	 2021-04-13 18:25:44
-Uptime:		 4:49h | 17379 sec
-
-~~~~~~~~~~~~~~~~~~~~ PROCESSOR INFO ~~~~~~~~~~~~~~~~~~~~
-Processor brand:	 ARMv7 Processor rev 4 (v7l)
-Chip ID:			 BCM2835
-Physical cores:		 4
-Total cores:		 4
-Max frequency:		 1400.0(MHz)
-Min frequency:		 600.0(MHz)
-
-~~~~~~~~~~~~~~~~~~~~ DISK(S) INFO ~~~~~~~~~~~~~~~~~~~~
-Diskpartition count:		 2
-Partition 1 name:			 /dev/root
-Partition 1 mountpoint:		 /
-Partition 1 FS type:		 ext4
-Partition 1 total size:		 58.58009719848633 GB
-Partition 1 space used:		 3.9503746032714844 GB
-Partition 1 space free:		 52.19103240966797 GB
-
-Partition 2 name:			 /dev/mmcblk0p1
-Partition 2 mountpoint:		 /boot
-Partition 2 FS type:		 vfat
-Partition 2 total size:		 43.18359375 MB
-Partition 2 space used:		 22.3203125 MB
-Partition 2 space free:		 20.86328125 MB
-
-
-~~~~~~~~~~~~~~~~~~~~NETWORK INFO ~~~~~~~~~~~~~~~~~~~~
-eth0 Network Speed: 10
-
-~~~~~~~~~~~~~~~~~~~~ MEMORY INFO ~~~~~~~~~~~~~~~~~~~~
-Total RAM:			 926.078125 MB
-Total Swap RAM:		 99.99609375 MB
