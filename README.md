@@ -8,8 +8,8 @@ The main purpose of this **Mon**(i)**t**(oring)**Sy**(stem) software is monitori
 
 MontSy is based on different modules, which can be switched on and off individually. 
 The main functions are the following:
-- system monitoring - records all relevant system data (cpu-usage a.e.)
-- system overview - creates a hardware system overview (cpu-type a.e.)
+- [system monitoring](#system-monitoring) - records all relevant system data (cpu-usage a.e.)
+- [system overview](#hardware-overview) - creates a hardware system overview (cpu-type a.e.)
 
 All official patch notes can be found within the description of each release or in the README of the patch-notes-branch.
 (Doesn't affect on beta / dev-branch releases)
@@ -106,13 +106,16 @@ $ python3 core.py
 After exiting the window, the script will interrupt.
 
 
+##### Hardware overview
 - If you wish to create a hardware overview type
 ```
-$ python3 core.py s 
+$ python3 montsy.py s 
 ```
+
+##### System monitoring
 - If you wish to start the monitoring manually type (the script will interrupt when the session ends)
 ```
-$ python3 core.py m 
+$ python3 montsy.py m 
 ```
 
 
