@@ -87,11 +87,11 @@ $ Make stop
 ```
 - To enable the system service type (the MontSy software will automatically start after each boot)
 ```
-$ Make stop
+$ Make enable
 ```
 - To disable the system service type (the MontSy software will no longer start automatically after each boot)
 ```
-$ Make stop
+$ Make disable
 ```
 - To show the system service status type
 ```
