@@ -8,5 +8,6 @@
 # -
 # file      | view_status.sh
 # project   | MontSy
+# version   | 0.9.6
 # 
 sudo systemctl status montsy.service

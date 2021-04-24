@@ -8,9 +8,8 @@
 # -
 # file      | monitoring.py
 # project   | MontSy
+# project-v | 0.9.6
 # 
-import modules.mon as mon
-from static import values
 import sqlite3
 import openpyxl
 from datetime import datetime, date
@@ -61,6 +60,7 @@ def xlsxConstructor(type, workbook, functions):
         worksheet.cell(1, col, item)
 
 def createStorage(self, files, tables, modules, net_modules):
+    from static import values
     filePathArray = []
     table_connection = {
         "generalmonitoring" : modules,
@@ -102,6 +102,7 @@ def retrieveModules(self):
     # getting all available functions 
     # access functions: modules[function]()
     keys = fromConfig.keys()
+    import modules.mon as mon
     
     for key in keys:
         if fromConfig[key].startswith("net_"):

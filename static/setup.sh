@@ -8,6 +8,7 @@
 # -
 # file      | setup.sh
 # project   | MontSy (Setup)
+# version   | 0.9.6
 # 
 echo -------------------
 echo started SHELL setup

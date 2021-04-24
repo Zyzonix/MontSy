@@ -3,7 +3,7 @@ Description=MontSy Runningservice
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/MontSy/core.py m
+ExecStart=/usr/bin/python3 /home/pi/MontSy/montsy.py m
 WorkingDirectory=/home/pi/MontSy/
 StandardOutput=inherit
 StandardError=inherit

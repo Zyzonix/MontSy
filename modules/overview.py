@@ -7,9 +7,9 @@
 # python-v  | 3.5.3
 # -
 # file      | overview.py
-# project   | MonSy
+# project   | MontSy
+# project-v | 0.9.6
 # 
-import modules.sov as sov
 import os
 
 # handle storing
@@ -33,7 +33,7 @@ def retrieveModules(self):
     # access functions: modules[function]()
     all_keys = len(fromConfig.keys())
     counter = 1
-    
+    import modules.sov as sov
     while counter <= all_keys:
         modules[fromConfig[counter]] = getattr(sov, fromConfig[counter])
         counter += 1
