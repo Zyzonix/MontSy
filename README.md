@@ -8,6 +8,13 @@ Here you can find the latest patch notes of the dev-branch. All official release
 
 ### Table of content
 * [Patch 0.9.2](#patch-0.9.2)
+* [Patch 0.9.6](#patch-0.9.6)
+
+## Patch 0.9.6
+First final beta release
+- fixed some small issues
+- reworked starting process (improved loading time)
+- checked data types in xlsx and SQLite
 
 ## Patch 0.9.2
 - fixed installation / uninstallation errors
