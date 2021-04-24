@@ -30,7 +30,7 @@ setup_i:
 # removing all entries / files / folders
 uninstall:
 	@echo ""
-	@echo uninstalling MontSy
+	@echo "uninstalling MontSy"
 	@echo ""
 	make stop
 	make disable
@@ -42,25 +42,25 @@ uninstall:
 
 # starting systemd-service
 start:
-	@echo uninstalling system service
+	@echo "starting system service"
 	@echo
 	sudo systemctl start montsy.service
 
 # stopping systemd-service
 stop:	
-	@echo stopping system service
+	@echo "stopping system service"
 	@echo ""
 	sudo systemctl stop montsy.service
 
 # installing service
 enable:
-	@echo installing system service
+	@echo "installing system service"
 	@echo ""
 	sudo systemctl enable montsy.service
 
 # uninstalling service
 disable:
-	@echo uninstalling system service
+	@echo "uninstalling system service"
 	@echo ""
 	sudo systemctl disable montsy.service
 
