@@ -30,11 +30,11 @@ The dev-branch patch notes can be found in the README of the patch-notes-branch.
 ## Requirements
 MontSy can be run on all devices/operating systems, that support Python 3.5 or higher. It is also recommendable to execute it on linux-based systems. The auto-setup scripts (Shell/Bash) and Makefiles can only be executed if the system supports them. 
 
-To install MontSy also Root permission (sudo) are required. But it is recommendable to run MontSy as an other user which is not the root user.
+To install MontSy also Root permissions (sudo) are required. It is recommendable to run MontSy as an other user than the root user.
 
 **Please notice that MontSy won't work on Windows/MacOS**
 
-If you wish to monitor your system statistics on Windows contact the developer via email (zyzonix@gmail.com). In this case a manual setup is reqired.
+If you wish to monitor your system statistics on Windows, please contact the developer via email (zyzonix@gmail.com). In this case a manual setup is reqired.
 
 
 ## Installation
@@ -43,12 +43,12 @@ To install MontSy download the whole project via git to your device and enter th
 $ git clone https://github.com/Zyzonix/MontSy.git
 $ cd MontSy/
 ```
-Before you can start entering the setup, you have to insert the correct paths to the system service file. Proceed as shown below:
+Before you can start entering the setup, it is required to insert the correct paths to the system service file. Proceed as shown below:
 ```
 $ cd static
 $ nano montsy.service
 ```
-Now insert the correct paths of the software and python (if Python is not installed, the installer will do this for you, then you can leave everything until the first space, so how it is) in line 6 after ExecStart=. It is also required to enter a correct working directory in line 7. (Directory where the software will be executed)
+Now insert the correct paths of the software and python (if Python is not installed, the installer will do this for you, then you can leave everything until the first space as it is) in line 6 after ExecStart=. It is also required to enter a correct working directory in line 7. (Directory = the direcetory where the software will be executed)
 
 Close the Nano-editor with **ctrl+x** and save the file through typing **Y + Enter**.
 
